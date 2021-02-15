@@ -1,0 +1,53 @@
+﻿@model DogKennel_Project.Models.Size
+
+@{
+    ViewData["Title"] = "Details";
+}
+<main id="main">
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+
+        <div class="container" data-aos="fade-up">
+            <div class="row gx-0">
+
+                <div class="col-lg-8 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="content">
+                        <h1>Details</h1>
+
+                        <div>
+                            <h4>Size</h4>
+                            <hr />
+                            <dl class="row">
+                                <dt class="col-sm-2">
+                                    @Html.DisplayNameFor(model => model.Size_Name)
+                                </dt>
+                                <dd class="col-sm-10">
+                                    @Html.DisplayFor(model => model.Size_Name)
+                                </dd>
+                                <dt class="col-sm-2">
+                                    @Html.DisplayNameFor(model => model.Shedding_Name)
+                                </dt>
+                                <dd class="col-sm-10">
+                                    @Html.DisplayFor(model => model.Shedding_Name)
+                                </dd>
+                            </dl>
+                        </div>
+                        <div>
+                            <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+                            <a asp-action="Index">Back to List</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
+                    <img src="~/assets/img/Sizes.jpg" class="img-fluid" alt="">
+                </div>
+
+            </div>
+        </div>
+
+    </section><!-- End About Section -->
+
+
+
+</main>

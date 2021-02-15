@@ -1,0 +1,62 @@
+﻿@model DogKennel_Project.Models.ActivityLevel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<main id="main">
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+
+        <div class="container" data-aos="fade-up">
+            <div class="row gx-0">
+
+                <div class="col-lg-8 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="content">
+                        <h1>Create</h1>
+
+                        <h4>ActivityLevel</h4>
+                        <hr />
+                        <div class="row">
+                            <div class="col-md-8">
+                                <form asp-action="Create">
+                                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                    <div class="form-group">
+                                        <label class="control-label">Activity</label>
+                                        <input asp-for="Activity_Level" class="form-control" />
+                                        <span asp-validation-for="Activity_Level" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label">Barking</label>
+                                        <input asp-for="Barking_Level" class="form-control" />
+                                        <span asp-validation-for="Barking_Level" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="submit" value="Create" class="btn btn-primary" />
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div>
+                            <a asp-action="Index">Back to List</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
+                    <img src="~/assets/img/activity.jpg" class="img-fluid" alt="">
+                </div>
+
+            </div>
+        </div>
+
+    </section><!-- End About Section -->
+
+
+
+</main>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
